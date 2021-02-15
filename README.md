@@ -1,4 +1,4 @@
-# GAIH Student Repo Example
+# GlobalAIHubPythonCourse
 ![](img/logo.png)
 
 **Course Date:** 06.09.2001  
