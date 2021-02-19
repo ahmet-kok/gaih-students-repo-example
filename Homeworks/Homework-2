@@ -1,0 +1,37 @@
+isim = []   # İsim
+sisim = []    # Soyisim
+mid = []    # Midterm puanı için.
+final = []    # Final için.
+home = []   # Homework için.
+orta = []   # Ortalama hesaplamak için.
+sonuc = []    # Ortalamanın sonucu.
+isi = []    # İsim + soyisim.
+lastinfo = {}
+losto = []
+lastlist = []
+a = int(input("kaç öğrenci var? "))   # Eksta olarak ekledim hocam.
+for x in range(a):
+  isim.append(input("Adınız: "))
+  sisim.append(input("Soyadınız: "))
+  mid.append(float(input("Ara sınav puanınız: ")))
+  final.append(float(input("Final puanınız: ")))
+  home.append(float(input("Ödev puanınız: ")))
+
+liste = list(zip(isim, sisim))    # Kodda ziplenmiş hali bulunsun diye yaptım ama kullanmadım.
+for x in range(a):    # İsim ile soyisimi birleştirdim.
+  isi.append(isim[x] + " " + sisim[x])
+print(liste)
+for x in range(a):    # Ortalamaları hesapladım.
+  orta.append(mid[x] + final[x] + home[x])
+  sonuc.append(orta[x] / 3)
+for x in range(a):
+  sonuc[x] = format(sonuc[x], ".2f")
+for x in range(a):    # Ortalama sonuçları ile isimleri eşleştirdiğim bir sözlük oluşturdum.
+  lastinfo[isi[x]] = sonuc[x]
+losto = zip(isi, sonuc)
+topsonuc = sorted(losto, key = lambda t: t[1])
+twice = topsonuc.copy()
+twice.pop()
+twice.reverse()
+lastlist = twice
+print("Tebrikler" + " " + topsonuc[a-1][0] + " " + "puanınız: " + str(topsonuc[a-1][1]) + "\n" + "Diğer kişiler: " + "\n" + str(format(lastlist, ".2f")))
