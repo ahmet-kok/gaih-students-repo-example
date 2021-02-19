@@ -34,4 +34,4 @@ twice = topsonuc.copy()
 twice.pop()
 twice.reverse()
 lastlist = twice
-print("Tebrikler" + " " + topsonuc[a-1][0] + " " + "puanınız: " + str(topsonuc[a-1][1]) + "\n" + "Diğer kişiler: " + "\n" + str(format(lastlist, ".2f")))
+print("Tebrikler" + " " + topsonuc[a-1][0] + " " + "puanınız: " + str(topsonuc[a-1][1]) + "\n" + "Diğer kişiler: " + "\n" + str(lastlist))
