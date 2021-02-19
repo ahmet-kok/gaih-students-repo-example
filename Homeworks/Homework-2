@@ -20,7 +20,6 @@ for x in range(a):
 liste = list(zip(isim, sisim))    # Kodda ziplenmiş hali bulunsun diye yaptım ama kullanmadım.
 for x in range(a):    # İsim ile soyisimi birleştirdim.
   isi.append(isim[x] + " " + sisim[x])
-print(liste)
 for x in range(a):    # Ortalamaları hesapladım.
   orta.append(mid[x] + final[x] + home[x])
   sonuc.append(orta[x] / 3)
