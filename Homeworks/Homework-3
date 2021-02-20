@@ -1,0 +1,40 @@
+set1 = set()
+set2 = set()
+set3 = set()
+set4 = []
+set5 = set()
+set6 = set()
+set7 = set()
+set8 = []
+
+def prime_first():
+    for x in range(2,500):
+      for a in range(2,x):
+          y = x/a
+          if float(y) == int(y): # sağlarsa asal değil.
+            a = x
+            set6.add(x) 
+          elif float(y) != int(y) or x == 2: # sağlarsa asal olabilir.
+            set5.add(x)
+    set7 = set5-set6
+    set8 = list(set7)
+    set8.insert(0,2)
+    set8.sort()
+    
+    print(set8)       
+def prime_second():
+    for x in range(500,1000):
+      for a in range(2,x):
+          y = x/a
+          if float(y) == int(y):
+            a= x
+            set2.add(x)
+            break
+          elif float(y) != int(y):
+            set1.add(x)
+    set3 = set1 - set2
+    set4 = list(set3)
+    set4.sort()
+    print(set4)    
+first = prime_first()
+second = prime_second()
